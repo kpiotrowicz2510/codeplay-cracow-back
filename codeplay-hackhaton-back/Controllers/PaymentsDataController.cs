@@ -17,6 +17,8 @@ namespace codeplayhackhatonback.Controllers
         [HttpGet]
         public string Get()
         {
+            return System.IO.File.ReadAllText("data.txt");
+            /*
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -28,6 +30,7 @@ namespace codeplayhackhatonback.Controllers
             var msg = stringTask.Result;
 
             return msg;
+            */
         }
 
         // GET api/values/5
