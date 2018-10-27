@@ -29,6 +29,16 @@ namespace codeplayhackhatonback.Controllers
             }
         }
 
+        [HttpGet("notification")]
+        public string GetNotification()
+        {
+            using (var db = new RachunekContext())
+            {
+                var newRachunek = db.Rachunki.Where(r => r.Status == 0).First();
+                return GetStatus(newRachunek.Id);
+
+            }
+        }
         [HttpGet("{id}/status")]
         public string GetStatus(int id){
             using (var db = new RachunekContext())
