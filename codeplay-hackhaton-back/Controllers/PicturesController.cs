@@ -36,7 +36,7 @@ namespace codeplayhackhatonback.Controllers
             {
                 var newRachunek = db.Rachunki.Where(r => r.Status == 0).FirstOrDefault();
                 if(newRachunek==null){
-                    return null;
+                    return 0;
                 }
                 return newRachunek.Id;
 
