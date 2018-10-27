@@ -30,7 +30,7 @@ namespace codeplayhackhatonback.Controllers
         }
 
         [HttpGet("notification")]
-        public string GetNotification()
+        public int? GetNotification()
         {
             using (var db = new RachunekContext())
             {
@@ -38,7 +38,7 @@ namespace codeplayhackhatonback.Controllers
                 if(newRachunek==null){
                     return null;
                 }
-                return GetStatus(newRachunek.Id);
+                return newRachunek.Id;
 
             }
         }
