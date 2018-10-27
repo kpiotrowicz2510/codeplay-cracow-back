@@ -35,6 +35,9 @@ namespace codeplayhackhatonback.Controllers
             using (var db = new RachunekContext())
             {
                 var newRachunek = db.Rachunki.Where(r => r.Status == 0).First();
+                if(newRachunek==null){
+                    return null;
+                }
                 return GetStatus(newRachunek.Id);
 
             }
