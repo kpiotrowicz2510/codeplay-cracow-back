@@ -39,6 +39,7 @@ namespace codeplay_hackhaton_back
             {
                 app.UseHsts();
             }
+            app.UseDeveloperExceptionPage();
 
             app.UseHttpsRedirection();
             app.UseMvc();
