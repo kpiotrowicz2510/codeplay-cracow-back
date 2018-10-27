@@ -14,4 +14,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="rachunki.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="rachunki.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
