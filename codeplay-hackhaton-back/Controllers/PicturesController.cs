@@ -57,16 +57,13 @@ namespace codeplayhackhatonback.Controllers
 
         // POST api/values
         [HttpPost]
-        public Rachunek Post([FromBody]string value)
+        public Rachunek Post([FromBody]Rachunek value)
         {
             using (var db = new RachunekContext())
             {
-                var rachunek = new Rachunek();
-                rachunek.Image = value;
-                rachunek.Status = 0;
-                db.Rachunki.Add(rachunek);
+                db.Rachunki.Add(value);
                 db.SaveChanges();
-                return rachunek;
+                return value;
             }
         }
     }
