@@ -28,9 +28,6 @@ namespace codeplay_hackhaton_back
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddEntityFrameworkSqlite()
-            .AddDbContext<RachunekContext>(
-                options => { options.UseSqlite($"Data Source=rachunki.db"); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
