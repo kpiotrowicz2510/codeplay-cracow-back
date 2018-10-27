@@ -18,9 +18,17 @@
     <None Remove="rachunki.db" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="wwwroot\data.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="rachunki.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\data.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Update="data.txt">
